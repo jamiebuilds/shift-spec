@@ -205,8 +205,12 @@ interface AssignmentTargetPropertyProperty : AssignmentTargetProperty {
 // classes
 
 interface Class {
-  attribute Expression? super;
+  attribute ClassSuper? super;
   attribute ClassElement[] elements;
+};
+
+interface ClassSuper {
+  attribute Expression expression;
 };
 
 interface ClassExpression : Expression {
